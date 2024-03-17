@@ -1,0 +1,9 @@
+.hero_images {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	overflow: hidden;
+}
+img {
+	display: block;
+	width: 100%;
+}
