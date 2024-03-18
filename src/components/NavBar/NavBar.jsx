@@ -2,7 +2,7 @@ import s from "./style.module.css";
 import { Dropdown } from "../Dropdown/Dropdown";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CaretDown } from "@phosphor-icons/react";
+import { List, X } from "@phosphor-icons/react";
 
 export function NavBar() {
 	const [dropdown, setDropdown] = useState(false);
@@ -16,34 +16,17 @@ export function NavBar() {
 
 	return (
 		<>
+			{/* ALTERNATE WAY OF DESIGNING NAVBAR USING DROPDOWN ALSO SHOWN IN COMPONENTS FOLDER */}
 			<ul className={s.main_nav_list}>
 				<li>
 					<Link to="/all" className={s.main_nav_link}>
 						All
 					</Link>
 				</li>
-				<li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+				<li>
 					<Link to="/men's clothing" className={s.main_nav_link}>
-						Men's Clothing <CaretDown size={14} />
+						Men's Clothing
 					</Link>
-					{/* {dropdown && (
-						<ul className="dropdown_menu">
-							{MenuItems.map((item, index) => {
-								return (
-									<li className="dropdown_menu_list" key={index}>
-										<Link
-											to={item.path}
-											className="dropdown_menu_listitem"
-											value={category}
-											onClick={updateFilterValue}
-										>
-											{item.title}
-										</Link>
-									</li>
-								);
-							})}
-						</ul>
-					)} */}
 				</li>
 				<li>
 					<Link to="/women's clothing" className={s.main_nav_link}>
@@ -61,6 +44,11 @@ export function NavBar() {
 					</Link>
 				</li>
 			</ul>
+
+			{/* <div className={s.mobile_navbar_btn}>
+				<List size={32} className={s.mobile_nav_icon} />
+				<X size={32} className={s.mobile_nav_icon} />
+			</div> */}
 		</>
 	);
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import s from "./style.module.css";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useFilterContext } from "../../api/context/filter_context";
+import { Link } from "react-router-dom";
 
 export function SearchBar() {
 	const {

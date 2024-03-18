@@ -2,8 +2,89 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	overflow: hidden;
+	background-color: #d9480f;
+}
+figure:hover {
+	cursor: pointer;
+	opacity: 90%;
+
+	transition: all ease-in-out 0.3s;
+}
+.caption {
+	position: absolute;
+	translate: 0 -7rem;
+	padding-left: 2rem;
+	text-transform: uppercase;
+	font-family: "Poppins", sans-serif;
+
+	font-size: 6rem;
+	font-weight: 500;
+	color: black;
 }
 img {
 	display: block;
+	opacity: 90%;
 	width: 100%;
+}
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+	.caption {
+		font-size: 5rem;
+	}
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+	.caption {
+		translate: 0 -5rem;
+		font-size: 4rem;
+	}
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+	.caption {
+		translate: 0 -3.5rem;
+
+		font-size: 3rem;
+	}
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+	.hero_images {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.caption {
+		translate: 0 -4rem;
+		padding-left: 3rem;
+
+		font-size: 3rem;
+	}
+}
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+	.caption {
+		translate: 0 -3rem;
+		padding-left: 1rem;
+
+		font-size: 2.2rem;
+	}
 }

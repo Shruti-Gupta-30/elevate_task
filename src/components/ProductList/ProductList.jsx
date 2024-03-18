@@ -10,7 +10,7 @@ export function ProductList() {
 	// if (isLoading) {
 	// 	return <div>...Loading</div>;
 	// }
-	const { all_products } = useFilterContext();
+	const { filter_products } = useFilterContext();
 
 	// const getUniqueData = (data, property) => {
 	// 	let newVal = data.map((curElem) => {
@@ -26,7 +26,7 @@ export function ProductList() {
 		<>
 			<Header />
 			<div className={s.product_grid}>
-				{all_products.map((curElem) => {
+				{filter_products.map((curElem) => {
 					return <Product key={curElem.id} {...curElem} />;
 				})}
 			</div>
