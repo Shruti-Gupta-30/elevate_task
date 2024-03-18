@@ -5,7 +5,7 @@ import { App } from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AppProvider } from "./api/context/products_context.jsx";
 import { FilterContextProvider } from "./api/context/filter_context.jsx";
-import { ProductList } from "./components/ProductList/ProductList.jsx";
+
 import { All } from "./Pages/All.jsx";
 import { Mens } from "./Pages/Mens.jsx";
 import { Womens } from "./Pages/Womens.jsx";

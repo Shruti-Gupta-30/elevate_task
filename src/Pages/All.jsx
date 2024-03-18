@@ -1,7 +1,6 @@
 import { Product } from "../components/Product/Product";
 import s from "./pages.css";
 import { Header } from "../components/Header/Header";
-import { useProductContext } from "../api/context/products_context";
 import { useFilterContext } from "../api/context/filter_context";
 
 export function All() {
