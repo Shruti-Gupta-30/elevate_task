@@ -8,42 +8,56 @@ export function NavBar() {
 	const [dropdown, setDropdown] = useState(false);
 
 	const onMouseEnter = () => {
-		if (window.innerWidth < 960) {
-			setDropdown(true);
-		} else {
-			setDropdown(false);
-		}
+		setDropdown(true);
 	};
 	const onMouseLeave = () => {
-		if (window.innerWidth < 960) {
-			setDropdown(true);
-		} else {
-			setDropdown(false);
-		}
+		setDropdown(false);
 	};
 
 	return (
 		<>
 			<ul className={s.main_nav_list}>
 				<li>
-					<Link to="/" className={s.main_nav_link}>
-						New Arrivals
+					<Link to="/all" className={s.main_nav_link}>
+						All
 					</Link>
 				</li>
 				<li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-					<Link to="/" className={s.main_nav_link}>
-						Clothing <CaretDown size={14} />
+					<Link to="/men's clothing" className={s.main_nav_link}>
+						Men's Clothing <CaretDown size={14} />
 					</Link>
-					{dropdown && <Dropdown />}
+					{/* {dropdown && (
+						<ul className="dropdown_menu">
+							{MenuItems.map((item, index) => {
+								return (
+									<li className="dropdown_menu_list" key={index}>
+										<Link
+											to={item.path}
+											className="dropdown_menu_listitem"
+											value={category}
+											onClick={updateFilterValue}
+										>
+											{item.title}
+										</Link>
+									</li>
+								);
+							})}
+						</ul>
+					)} */}
 				</li>
 				<li>
-					<Link to="/accessories" className={s.main_nav_link}>
-						Accessories
+					<Link to="/women's clothing" className={s.main_nav_link}>
+						Women's CLothing
 					</Link>
 				</li>
 				<li>
-					<Link to="/collections" className={s.main_nav_link}>
-						Collections
+					<Link to="/jewelery" className={s.main_nav_link}>
+						Jewelery
+					</Link>
+				</li>
+				<li>
+					<Link to="/electronics" className={s.main_nav_link}>
+						Electronics
 					</Link>
 				</li>
 			</ul>
